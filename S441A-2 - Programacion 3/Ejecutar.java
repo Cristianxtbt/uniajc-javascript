@@ -4,7 +4,7 @@ public class Ejecutar {
       //Forma 1 - Creación del arreglo
       int[] a = {2, 8, 10, 6, 15, 20, 21, 1, 3, 12};
  
-      //mostrar el arreglo
+      //Mostrar el arreglo
       for (int i = 0; i < a.length; i++) {
          System.out.println("a[" + i + "]=" + a[i]);  
       }
@@ -15,12 +15,12 @@ public class Ejecutar {
       int max = 100;
       int min = 1;
  
-      //llenamos el arreglo b con números aleatorios entre 1 y 100
+      //Llenamos el arreglo
       for (int i = 0; i < b.length; i++) {
          b[i] = (int)(Math.random() * (max - min + 1)) + min;
       }
  
-      //mostrar el arreglo
+      //Mostrar el arreglo
       for (int i = 0; i < b.length; i++) {
          System.out.println("b[" + i + "]=" + b[i]);  
       }
