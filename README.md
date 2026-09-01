@@ -1,2 +1,2 @@
 # uniajc-javascript
-Material de clase
+Material de clase - Semestre 3
