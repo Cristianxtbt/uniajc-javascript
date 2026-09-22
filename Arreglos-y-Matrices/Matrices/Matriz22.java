@@ -1,6 +1,7 @@
+package Matrices;
 import java.util.Scanner;
 
-public class Matriz {
+public class Matriz22 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese número de filas: ");
@@ -18,34 +19,19 @@ public class Matriz {
             }
         }
  
-        // Suma de cada fila
-        int[] sumaFilas = new int[filas];
+        System.out.println("\nMatriz completa:");
         for (int i = 0; i < filas; i++) {
-            int suma = 0;
             for (int j = 0; j < columnas; j++) {
-                suma += matriz[i][j];
+                System.out.print(matriz[i][j] + "\t");
             }
-            sumaFilas[i] = suma;
+            System.out.println();
         }
  
-        // Suma de cada columna
-        int[] sumaColumnas = new int[columnas];
-        for (int j = 0; j < columnas; j++) {
-            int suma = 0;
-            for (int i = 0; i < filas; i++) {
-                suma += matriz[i][j];
-            }
-            sumaColumnas[j] = suma;
-        }
- 
-        System.out.println("\nSuma de cada fila:");
+        System.out.println("\nElementos con su posición:");
         for (int i = 0; i < filas; i++) {
-            System.out.println("Fila " + i + ": " + sumaFilas[i]);
-        }
- 
-        System.out.println("\nSuma de cada columna:");
-        for (int j = 0; j < columnas; j++) {
-            System.out.println("Columna " + j + ": " + sumaColumnas[j]);
+            for (int j = 0; j < columnas; j++) {
+                System.out.println("Posición [" + i + "][" + j + "] = " + matriz[i][j]);
+            }
         }
  
         sc.close();

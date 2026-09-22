@@ -1,3 +1,4 @@
+package Matrices;
 public class Matriz18 {
     public static void main(String[] args) {
         // Matriz 10x10 para almacenar la tabla de multiplicar

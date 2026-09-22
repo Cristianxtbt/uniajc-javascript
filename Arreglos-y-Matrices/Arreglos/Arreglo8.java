@@ -1,3 +1,4 @@
+package Arreglos;
 public class Arreglo8 {
     public static void main(String[] args) {
 
