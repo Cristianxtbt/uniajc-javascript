@@ -1,59 +1,26 @@
 public class Pelicula {
     private String nombre;
     private String idioma;
-    private String formato;
-    private int duracion;
+    private String tipo; // "35mm" o "3D"
+    private int duracionMinutos;
 
-
-    //CONSTRUCTOR
-    public Pelicula(String nombre, String idioma, String formato, int duracion) {
+    public Pelicula(String nombre, String idioma, String tipo, int duracionMinutos) {
         this.nombre = nombre;
         this.idioma = idioma;
-        this.formato = formato;
-        this.duracion = duracion;
+        this.tipo = tipo;
+        this.duracionMinutos = duracionMinutos;
     }
 
-    //METODOS GET
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() { return nombre; }
+    public String getIdioma() { return idioma; }
+    public String getTipo() { return tipo; }
+    public int getDuracionMinutos() { return duracionMinutos; }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre    ;
-    }
+    public boolean es3D() { return tipo.equalsIgnoreCase("3D"); }
 
-    public String getIdioma() {
-        return idioma   ;
-    }
-
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
-    }
-
-    public String getFormato() {
-        return formato;
-    }
-
-    public void setFormato(String formato) {
-        this.formato = formato  ;
-    }
-
-    public int getDuracion() {
-        return duracion ;
-    }
-
-    public void setDuracion(int duracion) {
-        this.duracion = duracion    ;
-    }
-
-    //OVERRIDE DE METODO TOSTRING
     @Override
     public String toString() {
-        return "Pelicula{" +
-                "nombre='" + nombre + '\'' +
-                ", idioma='" + idioma + '\'' +
-                ", formato='" + formato + '\'' +
-                ", duracion=" + duracion +
-                '}';
-}
+        return String.format("%-25s | Idioma: %-10s | Tipo: %-4s | Duracion: %d min",
+                nombre, idioma, tipo, duracionMinutos);
+    }
 }
